@@ -1,0 +1,8 @@
+rootProject.name = 'hot-chat-backend'
+
+include (
+        "domain",
+
+        "application:service-api",
+        "application:batch"
+)
