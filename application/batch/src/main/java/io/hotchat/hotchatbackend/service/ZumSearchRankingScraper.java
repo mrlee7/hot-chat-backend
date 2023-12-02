@@ -1,6 +1,6 @@
 package io.hotchat.hotchatbackend.service;
 
-import io.hotchat.hotchatbackend.domain.SearchRanking;
+import io.hotchat.hotchatbackend.domain.search_ranking.SearchRanking;
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
 import org.jsoup.select.Elements;

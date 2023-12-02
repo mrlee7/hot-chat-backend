@@ -1,7 +1,7 @@
 package io.hotchat.hotchatbackend.web.service;
 
 
-import io.hotchat.hotchatbackend.domain.SearchRankingRepository;
+import io.hotchat.hotchatbackend.domain.search_ranking.SearchRankingRepository;
 import io.hotchat.hotchatbackend.web.dto.SearchRankingResponseDto;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;

@@ -1,7 +1,7 @@
 package io.hotchat.hotchatbackend.schedule;
 
-import io.hotchat.hotchatbackend.domain.SearchRanking;
-import io.hotchat.hotchatbackend.domain.SearchRankingRepository;
+import io.hotchat.hotchatbackend.domain.search_ranking.SearchRanking;
+import io.hotchat.hotchatbackend.domain.search_ranking.SearchRankingRepository;
 import io.hotchat.hotchatbackend.service.SearchRankingScraper;
 import lombok.RequiredArgsConstructor;
 import org.springframework.scheduling.annotation.Scheduled;

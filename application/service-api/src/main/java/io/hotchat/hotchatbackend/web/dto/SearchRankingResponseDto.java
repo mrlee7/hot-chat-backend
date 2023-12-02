@@ -1,6 +1,6 @@
 package io.hotchat.hotchatbackend.web.dto;
 
-import io.hotchat.hotchatbackend.domain.SearchRanking;
+import io.hotchat.hotchatbackend.domain.search_ranking.SearchRanking;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;

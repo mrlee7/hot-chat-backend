@@ -12,6 +12,14 @@ services:
     networks:
       - hotchat_network
 
+
+  redis:
+    image: redis:latest
+    ports:
+      - "6379:6379"
+    networks:
+      - hotchat_network
+
 volumes:
   mongodb_data:
 

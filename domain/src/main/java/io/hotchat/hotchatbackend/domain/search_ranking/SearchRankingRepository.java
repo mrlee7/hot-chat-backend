@@ -1,4 +1,4 @@
-package io.hotchat.hotchatbackend.domain;
+package io.hotchat.hotchatbackend.domain.search_ranking;
 
 import org.springframework.data.mongodb.repository.MongoRepository;
 
