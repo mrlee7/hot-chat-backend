@@ -12,7 +12,6 @@ services:
     networks:
       - hotchat_network
 
-
   redis:
     image: redis:latest
     ports:
@@ -20,8 +19,35 @@ services:
     networks:
       - hotchat_network
 
+  zookeeper:
+    image: 'bitnami/zookeeper:latest'
+    environment:
+      ALLOW_ANONYMOUS_LOGIN: 'yes'
+    ports:
+      - '2181:2181'
+    networks:
+      - hotchat_network
+
+  kafka:
+    image: 'bitnami/kafka:latest'
+    environment:
+      KAFKA_BROKER_ID: 1
+      KAFKA_LISTENERS: PLAINTEXT://:9092
+      KAFKA_ADVERTISED_LISTENERS: PLAINTEXT://kafka:9092
+      KAFKA_ZOOKEEPER_CONNECT: zookeeper:2181
+      ALLOW_PLAINTEXT_LISTENER: 'yes'
+    ports:
+      - '9092:9092'
+    volumes:
+      - 'kafka_data:/bitnami/kafka'
+    depends_on:
+      - zookeeper
+    networks:
+      - hotchat_network
+
 volumes:
   mongodb_data:
+  kafka_data:
 
 networks:
   hotchat_network:

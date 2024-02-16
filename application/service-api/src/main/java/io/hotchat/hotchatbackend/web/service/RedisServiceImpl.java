@@ -12,7 +12,12 @@ public class RedisServiceImpl implements RedisService {
     private final StringRedisTemplate stringRedisTemplate;
 
     @Override
-    public void saveSession(String sessionId) {
-        stringRedisTemplate.opsForValue().set(sessionId, "active");
+    public void save(String nickname) {
+        stringRedisTemplate.opsForValue().set(nickname, "active");
+    }
+
+    @Override
+    public Boolean isExist(String nickname) {
+        return stringRedisTemplate.hasKey(nickname);
     }
 }

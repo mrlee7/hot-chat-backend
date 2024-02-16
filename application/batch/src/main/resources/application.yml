@@ -2,5 +2,14 @@ spring:
   data:
     mongodb:
       uri: mongodb://rootuser:rootpass@localhost:27017/searchrankings?authSource=admin
+  kafka:
+    bootstrap-servers: localhost:9092
+    consumer:
+      group-id: hot-chat-backend
+      auto-offset-reset: earliest
+      key-deserializer: org.apache.kafka.common.serialization.StringDeserializer
+      value-deserializer: org.apache.kafka.common.serialization.StringDeserializer
+
 server:
   port: 13001
+
